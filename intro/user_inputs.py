@@ -27,12 +27,14 @@ print("Students ....\n", students)
 
 def double_and_print(number):
 
-    input = number
-    def double(input):
-        return input * 2
-    val = double(number)
+    my_number = number
 
-    print(f"double of {number} = {val}")
+    def double(my_number):
+        return my_number * 2
+
+    result = double(my_number)
+
+    print(f"double of {number} = {result}")
 
 double_and_print(10)
 double_and_print(20)
