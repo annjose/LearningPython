@@ -30,6 +30,7 @@ def add_student(name, age=15):
         "age": age
     }
     students.append(student)
+    print(f"Added new student with name '{name}' and age '{age}'")
 
 
 # print(f"name = {name}")  # function's argument "name" is not available outside the function scope
@@ -43,7 +44,6 @@ def get_student_age(name):
             break
 
     return age
-
 
 add_student("Mark", 14)
 add_student("Liza", 15)
@@ -66,3 +66,13 @@ def my_print(name, age, *args):
 
 
 my_print("Liza", 14, "a", 12, "bd")
+
+name = "ann catherine"
+print(name.title())
+
+student_name = input("Enter student's name: ")
+student_age = input("Enter student's age: ")
+add_student(student_name, student_age)
+
+print(students)
+
