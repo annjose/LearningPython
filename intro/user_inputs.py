@@ -25,16 +25,3 @@ while add_student.lower() == "yes" or add_student.lower() == "y":
 print("Students ....\n", students)
 
 
-def double_and_print(number):
-
-    my_number = number
-
-    def double(my_number):
-        return my_number * 2
-
-    result = double(my_number)
-
-    print(f"double of {number} = {result}")
-
-double_and_print(10)
-double_and_print(20)

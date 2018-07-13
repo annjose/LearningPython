@@ -76,3 +76,40 @@ add_student(student_name, student_age)
 
 print(students)
 
+### Nested Functions
+def double_and_print(number):
+
+    my_number = number
+
+    def double(my_number):
+        return my_number * 2
+
+    result = double(my_number)
+
+    print(f"double of {number} = {result}")
+
+double_and_print(10)
+double_and_print(20)
+
+### Function Scoping
+
+def foo():
+    print("foo")
+    bar()
+
+    # call foobar which is defined below foo() and bar()
+    foobar()
+
+
+def bar():
+    print("bar")
+
+# this won't work because foobar() which is defined BELOW the call-site of foo()
+# foo()
+
+
+def foobar():
+    print("foobar")
+
+# this will work because at the call-site of foo(), foobar() is already defined
+foo()
