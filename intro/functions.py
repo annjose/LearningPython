@@ -35,6 +35,15 @@ def add_student(name, age=15):
 
 # print(f"name = {name}")  # function's argument "name" is not available outside the function scope
 
+print("-------------Return statements----------------")
+def my_function():
+    print("Inside my_function(). Before return. This line will be printed")
+    return
+
+    print("Inside my_function(). After return. This line won't be printed")
+
+my_function()
+print("-----------------------------")
 
 def get_student_age(name):
     age = -1
@@ -59,24 +68,9 @@ print(get_student_age("Donno"))  # prints -1
 
 print("a", 12, "bd")
 
-
-def my_print(name, age, *args):
-    print("name =", name, "age =", age)
-    print(args)
-
-
-my_print("Liza", 14, "a", 12, "bd")
-
-name = "ann catherine"
-print(name.title())
-
-student_name = input("Enter student's name: ")
-student_age = input("Enter student's age: ")
-add_student(student_name, student_age)
-
-print(students)
-
 ### Nested Functions
+print("------------Nested Functions START-----------------")
+
 def double_and_print(number):
 
     my_number = number
@@ -90,6 +84,20 @@ def double_and_print(number):
 
 double_and_print(10)
 double_and_print(20)
+
+print("------------Nested Functions END-----------------")
+
+## Lambda Functions - anonymous functions
+print("-----------Lambda Functions START------------------")
+def double1(num):
+    return num * 2
+
+double2 = lambda num: num * 2
+
+print("double1 - regular function =", double1(3))
+print("double2 - lambda function =", double2(3))
+
+print("-----------Lambda Functions END------------------")
 
 ### Function Scoping
 
